@@ -39,10 +39,7 @@ def analyze_sales_data(products_data, all_products, list_products):
     print(f"Mest sålda produkt: {most_common_product[0]}, Antal: {most_common_product[1]}")
     print(f"Mest lukrativa produkt: \"{most_lucrative_product}\" med försäljning på {format_currency(product_value)}")
 
-try:
-    locale.setlocale(locale.LC_ALL, 'sv_SE.UTF-8')
-except locale.Error:
-    locale.setlocale(locale.LC_ALL, '')
+locale.setlocale(locale.LC_ALL, 'sv_SE.UTF-8')
 
 products_data, all_products, list_products = load_sales('sales_data.csv')
 analyze_sales_data(products_data, all_products, list_products)
