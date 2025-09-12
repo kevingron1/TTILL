@@ -57,4 +57,4 @@ while True:
     idx = int(input("Välj produkt: "))
     product = products[idx-1]
     
-    print(f"{product['name']} - {product['desc']} - {'QTY'}: {product['quantity']}")   
+    print(f"{product['name']} - {product['desc']} - {product['price']} {'SEK'} - {'QTY'}:{product['quantity']}")
