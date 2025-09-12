@@ -56,5 +56,5 @@ list_all_products(products)
 while True:
     idx = int(input("Välj produkt: "))
     product = products[idx-1]
-    
-    print(f"{product['name']} - {product['desc']} - {product['price']} {'SEK'} - {'QTY'}:{product['quantity']}")
+
+    print(f"Namn: {product['name']} \nBeskrivning: {product['desc']} \nPris: {product['price']} {'SEK'} \nKvantitet: {product['quantity']}")
