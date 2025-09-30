@@ -51,6 +51,11 @@ os.system('cls')
 print("X = Ta Bort Produkt \nA = Lägg till Produkt")
 
 list_all_products(products)
+
+found_max = max(products, key=lambda id: id['id'])
+max_id = found_max['id']
+new_id = max_id + 1
+
 choice = input().strip().upper()
 if choice == "X":
     print("Vilken produkt vill du ta bort? (ange nummer)")
