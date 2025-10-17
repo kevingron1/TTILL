@@ -38,7 +38,7 @@ def view_products(products):
         
 def list_all_products(products):
     for idx, product in enumerate(products):
-        print(f"{idx+1} {product['name']} {product['price']} {product['quantity']}")
+        print(f"{idx+1} {product['name']} {product['price']} (QTY: {product['quantity']})")
 
 
 locale.setlocale(locale.LC_ALL, 'sv_SE.UTF-8')  
@@ -47,9 +47,10 @@ load_data('db_products.csv')
 
 os.system('cls')
 
-print("X = Ta Bort Produkt \nA = Lägg till Produkt")
 
 list_all_products(products)
+
+print("\nX = Ta Bort Produkt \nA = Lägg till Produkt\nÄ = Ändra Produkt")
 
 found_max = max(products, key=lambda id: id['id'])
 max_id = found_max['id']
@@ -91,6 +92,9 @@ elif choice == "A":
         writer.writeheader()
         for p in products:
             writer.writerow(p)
+elif choice == "Ä":
+    print("Vilken produkt vill du ändra? (ange nummer)")
+    
 
 while True:
     idx = int(input("Välj produkt: "))
